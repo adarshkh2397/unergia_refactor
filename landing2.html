@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+    <link rel="icon" href="favicon.ico" sizes="16x16" type="image/ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+    font-family: Arial;
+    background: linear-gradient(to right, #1be4da, #5d7ce9);
+	
+}
+
+.split{
+	display:block;
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+a{ text-decoration:none; color:black;}
+
+.left {
+	
+    left: 0;
+	
+	
+    
+}
+.left:hover { opacity:0.6;}
+	
+
+.right {
+	
+    right: 0;
+	
+    
+}
+.right:hover{
+ opacity:0.6;
+}
+
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+	text-decoration:none;
+	background-color: none;
+	
+	
+}
+
+.centered img {
+    width: 150px;
+    border-radius: 50%;
+	
+}
+
+hr {
+			border-color:white;
+			border-style:solid ccc;
+			border-top: 0px solid white;
+			margin-top:15px;
+			background-color: white;
+			width:.2%;
+	}
+#logo {
+    position: relative;
+    margin-top:11px;
+    left: 41.7%;
+    margin-left: -(X/2)px;
+    margin-top: -(Y/2.4)px;
+}
+#logotext {
+    position: absolute;
+	
+	top:7px;
+   left: 46.4%;
+    color:#FFF;
+	margin-bottom:1px;
+    font-family: "Arial";
+	opacity:1;
+}
+h2 {
+color:#FFF;
+
+}
+	
+</style>
+</head>
+<body>
+<div class="logodiv">
+<img id="logo" src="logo.png" alt="image" height="50" width="60">
+<h1 id="logotext">Unergia</h1>
+</div>
+
+<a href="index_investor.html" class="split left">
+  <div class="centered">
+    <img src="images/lets.jpg" alt="Investor">
+    <h2>Are you an investor?</h2>
+    <p></p>
+  </div>
+</a>
+
+<hr width="5" size="597">
+
+<a class="split right" href="index_owner.html">
+  <div class="centered">
+    <img src="images/roof.png" alt="Owner">
+    <h2>Are you a rooftop owner?</h2>
+    <p></p>
+  </div>
+</a>
+
+    
+</body>
+</html> 

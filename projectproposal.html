@@ -1,0 +1,758 @@
+<?php
+session_start();
+?>
+<html>
+<head>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="loading-bar.css"/>
+<script type="text/javascript" src="loading-bar.js"></script>  
+
+<style type="text/css">
+@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}
+</style>
+<meta charset="utf-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+<link rel="stylesheet" href="https://d3szb066gfm8k8.cloudfront.net/assets/portal_base-41e1ea2a813cd5f1fc6c2ccb6256cbec203899dcc98d7d0e740a1ea475c1dd65.css"></link><style id="dark-reader-style" type="text/css">
+
+
+@media screen {
+
+/* Leading rule */    
+html {
+  -webkit-filter: brightness(90%) !important;
+  filter: brightness(90%) !important;
+}
+
+/* Text contrast */
+html {
+  text-shadow: 0 0 0 !important;
+} 
+
+/* Full screen */
+:-webkit-full-screen, :-webkit-full-screen * {
+  -webkit-filter: none !important;
+  filter: none !important;
+}
+:-moz-full-screen, :-moz-full-screen * {
+  -webkit-filter: none !important;
+  filter: none !important;
+}
+:fullscreen, :fullscreen * {
+  -webkit-filter: none !important;
+  filter: none !important;
+}
+
+/* Page background */
+html {
+  background: linear-gradient(to right, #1BE3DA , #5D7DE9);
+}
+
+h1{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 300%;
+  font-weight:lighter;
+  text-transform: uppercase;
+}
+h3{
+  font-size: 200%;
+  font-weight: lighter;
+  font-style: normal;
+}
+
+.building{
+  color:#428BCD;
+  font-weight: normal;
+}
+p,h1,h2,h3,h4,dd,font{
+color: #fff;
+font-weight: 700;
+font-family: 'Nunito', sans-serif;
+text-transform: uppercase;
+}
+dt{
+color:rgb(17, 85, 204);
+font-family: 'Nunito', sans-serif;
+text-transform: uppercase;
+}
+
+
+body{
+/*background: linear-gradient(to right, #1BE3DA , #5D7DE9);  
+background-image:linear-gradient(rgb(119, 163, 230), rgb(96, 123, 196)); 
+ background: #FEFFF1;*/
+ background-repeat: no-repeat;
+  height:120%;
+  background-opacity:1; 
+}
+
+
+.list-group__item:first-child {
+    border-top: 1px solid #e8e8e8;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+
+/*header{
+margin-top:4%;
+background: linear-gradient(to right, #1BE3DA , #5D7DE9);
+}*/
+
+dd{
+padding-top: 10px;
+}
+
+.grid-containe {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 5%;
+  padding: 5%;
+    
+}
+.grid-containe > div {
+  text-align: center;
+  padding:10px;
+  font-size: 30px;
+}
+
+
+
+.grid-container2 {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 10px;
+  /*padding: 10px;*/
+}
+
+div.polaroid {
+  width: 80%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+}
+
+div.container {
+  text-align: center;
+  padding: 10px 20px;
+}
+
+.grid-container > div {
+  text-align: center;
+  /*padding: 20px 0;*/
+  font-size: 30px;
+}
+
+.item1 {
+  grid-column-start: 1;
+  grid-column-end: 2
+  ;
+}
+.item2{
+ grid-column-start: 2;
+ grid-column-end: 3;
+}
+
+.list-group__item{
+    
+    align-items: center;
+    background:none;
+    border-bottom: 1px solid #e8e8e8;
+    border-left: 1px solid #e8e8e8;
+    border-right: 1px solid #e8e8e8;
+    line-height: 20px;
+    min-height: 100px;
+    padding: 20px 30px;
+}
+
+h2 {
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1;
+    margin: 0;
+}
+#abc{
+    position:relative;
+    top:10px;
+    right:0px;
+    height:20px;
+    width:0px;
+    padding-left:50px;
+}
+
+.navbar {
+  overflow: hidden;
+  background: linear-gradient(to right, #1BE3DA , #5D7DE9);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 1;
+  z-index: 99;
+}
+
+.navbar a {
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar .hello{
+  float: left;
+}
+
+.navbar a:hover {
+  /*background: #ddd;*/
+  color: #E5B616;
+}
+--------------------
+
+.mySlides {display: none;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+img{
+ border-radius: 25px;
+}
+--------------------
+button{
+    font-weight: 700;
+    font-family: 'Nunito', sans-serif;
+}
+
+.button1 {
+  background-color: #1B5471; 
+  color:white; 
+  border: 2px solid white;
+}
+
+.button1:hover {
+  background-color: #7CA2DF;
+  color: white;
+
+.links {
+  border :thin solid white;
+  padding: 5px;
+  padding-top: 5px;
+  display: block;
+  width: 60%;
+  border-radius: 10px;
+}
+.alignleft {
+  text-align: left;
+  
+}
+.alignright {
+  float: right;
+  
+  
+}
+.links p{
+  padding-left: 10px;
+  font-weight: 700;
+  font-family: 'Nunito', sans-serif;
+}
+.links button{
+  background:#ffffff;
+    color: #5d8ffc;
+    border: 0px;
+    border-radius: 5px;
+    padding: 14px;
+    display:block;
+    width: 20%;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+
+}
+
+.navbar button{
+    background: linear-gradient(to right, #4B7ED0,#4D7BD1);
+    opacity: 1;
+    color: #fff;
+    border: 0px;
+    border-radius: 5px;
+    padding: 6px;
+    display:block;
+    width: 100%;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+}
+
+.navbar button:hover{
+    background: #fff;
+    color:#5d8ffc;
+    border:1px solid #fff;
+    cursor: pointer;
+}
+
+#status{
+ background: linear-gradient(to right, #1BE3DA , #5D7DE9);
+}
+
+</style>
+
+<style>
+div #abc{
+  border: 1px solid white;
+  border-radius: 8px;
+  padding:5px;
+}  
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+  <a href="#logo" class="hello" ><img src="logo.png" class="hello" width="40px"/></a>
+  <!--<a href="logout.php" "><button type="button" class="btn btn-outline-dark">Logout</button></a>-->
+  <!--<form method="POST" action="logout.php"><a href="logout.php"><input type="submit" id="submit" name="submit" value="Logout"></a></form>-->
+  <a href="index.html">Home</a>
+  
+</div>   
+
+<!--div class="hero hero--offering-1">-->
+  <div class="lonely text-center">
+  <h1 class="building" id="Welcome"></h1>
+ 	<h3 class="building" id="info"></h3>
+  <!-- ngIf: offering.actionable --><!--<button class="button button--primary button--stretch action ng-binding ng-scope" ng-if="offering.actionable" ng-click="ctaAction(offering.id, return_path)">Invest</button><!-- end ngIf: offering.actionable -->
+  <!-- ngIf: !offering.actionable -->
+  <!--<button ng-target-blank-link="'/documents/'+offering.offering_memorandum.id" class="button button--secondary ng-isolate-scope"><i class="fa fa-arrow-circle-down"></i>&nbsp;Offering Memorandum</button>-->
+  <!--<p class="unrelated-top ng-binding">Invest today in a diversified portfolio of commercial solar projects that service some of the most stable businesses in the country. This solar project portfolio provides targeted monthly cashflows of 6% annually for 10 years, and it significantly reduces carbon energy pollution - aiding in the fight against climate change.</p>-->
+  </div>
+<!--</div>
+
+
+<center>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img id="img1" height="280" width="500" >
+  
+</div>
+
+<div class="mySlides fade">
+  <img id='img2' height="280" width="500">
+  </div>
+
+<div class="mySlides fade">
+   <img id='img3' height="280" width="500">
+  </div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+<BR><BR>
+
+</center>
+-->
+
+
+
+
+<br><br>
+<center><font><h1>Projects</h1></font></center>
+<div class="grid-containe" id="xyz">
+    
+</div>
+
+
+<div class="portal-content ng-scope" >
+  <div class="tabs offering-tabs">
+    <div class="tab offering-tab container unrelated-top unrelated-bottom">
+      <!-- uiView: tab --><div ui-view="tab" autoscroll="false" class="ng-scope">
+      
+      
+        <center>
+          <P STYLE="margin-bottom: 0in">    	</P>
+          <P STYLE="margin-bottom: 0in">    	</P>
+          <P STYLE="margin-bottom: 0in">    	</P>
+          <P STYLE="margin-bottom: 0in">    	</P>
+          <P STYLE="margin-bottom: 1in">    	</P>
+        
+<div style="color:#fff">
+<h1 STYLE="text-indent: 0.5in; margin-bottom: 0in"></h1>
+</P>
+<P STYLE="margin-bottom: 0in">    	</P>
+</center>
+
+
+
+<center>
+            
+<P STYLE="margin-bottom: 0in"><FONT SIZE=3><B>Unergia Sales Head:
+</B></FONT><FONT SIZE=3>Farhan Ahmed</FONT></P>
+<P STYLE="margin-bottom: 0in"><FONT SIZE=3><B>Email :
+</B></FONT><A HREF="mailto:farhan@unergia.net"><FONT COLOR="#1155cc"><FONT SIZE=3><U>farhan@unergia.net</U></FONT></FONT></A></P>
+<P STYLE="margin-bottom: 0in"><FONT SIZE=3><B>Number : </B></FONT><FONT SIZE=3>9087860727</FONT></P>
+<br><br>
+
+
+</center>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
+<title>Unergia</title>
+  <!-- including FusionCharts core package JS files -->
+
+
+  <!-- Step 1 - Including the fusioncharts core library -->
+  <script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/fusioncharts.js"></script> 
+  <!-- Step 2 - Including the fusion theme -->
+  <script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.fusion.js"></script>  
+  <!-- including Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-database.js"></script>
+ 
+
+  <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDnpO61_-FVcjqM4wj5QWd7P51cpxW05qo",
+    authDomain: "unergia-database-setup.firebaseapp.com",
+    databaseURL: "https://unergia-database-setup.firebaseio.com",
+    projectId: "unergia-database-setup",
+    storageBucket: "unergia-database-setup.appspot.com",
+    messagingSenderId: "837359356613"
+  };
+  firebase.initializeApp(config);
+  
+
+var queryString = decodeURIComponent(window.location.search);
+queryString = queryString.substring(1);
+for (var i = 0; i < queryString.length; i++)
+{
+	if(queryString[i]!='='){continue;}
+	else var pos=i+1;
+  
+}
+var url="";
+for (var i=pos;i<queryString.length;i++)
+{
+ 	url+=queryString[i];
+}
+
+console.log(url);
+document.write(url);
+
+
+var Invname="<?php echo $_SESSION['name'];?>";
+
+//document.getElementById("Welcome").innerHTML="Welcome, "+ Invname;
+
+var ref = firebase.database().ref(url);                           
+ref.on("value", function(snapshot){ 
+  var data=snapshot.child(Invname).val();
+
+  var img1=data.InvPageImage;
+  var img2=data.InvPageImage2;
+  var img3=data.InvPageImage3;
+  //document.getElementById("img1").src=img1;
+  //document.getElementById("img2").src=img2;
+  //document.getElementById("img3").src=img3;
+  
+	$("#elec1").html(data.ReturnDetails.Month);
+	$("#elec2").html(data.ReturnDetails.ThisMonthReturns);
+	$("#elec3").html(data.ReturnDetails.TotalReturns);
+  
+	
+});
+
+
+var surl=window.location.search;
+      var miniurl= surl.substring(surl.lastIndexOf("=") + 1);
+      
+
+function getData1(callbackIN) {
+      var ref = firebase.database().ref(miniurl);
+      ref.once('value').then(function(snapshot) {
+        callbackIN(snapshot.child(Invname).child("Chart1").val());
+      });
+    }
+    
+function getData2(callbackIN) {
+      var ref = firebase.database().ref("data2");
+      ref.once('value').then(function (snapshot) {
+        callbackIN(snapshot.val())
+      });
+    }
+
+</script>    
+    
+<script>
+
+var slideIndex = 0;
+
+
+  
+   var query = "proj" + "1.html"; 
+	//window.location.href = "inv.php" + query;
+                
+				var ref = firebase.database().ref("DiffProjects");
+				ref.on("value", getData);
+			
+			   	function getData(data) {
+					var projects=data.val();
+					var keys=Object.keys(projects);
+					console.log("KEYS "+ keys);
+                    var len=keys.length;
+				 
+				    for(var x=0; x <keys.length; x++)
+					{
+					var k=keys[x];
+          var irr=projects[k].IRRReturns;
+          var loc=projects[k].Location;
+          var projectcomp=projects[k].ProjectCompletion;
+          var projectcost=projects[k].ProjectCost;
+          var projectlen=projects[k].ProjectLength;
+          var projectsize=projects[k].ProjectSize;
+          var amtraised=projects[k].AmountRaised;
+          var creditrating=projects[k].CreditRating;
+					var fwdlink=projects[k].ForwardLink;
+					var name=projects[k].Name;
+					var img=projects[k].Image;
+          var item=document.createElement("div");
+          item.setAttribute('class','grid-item');
+          var image=document.createElement("img");
+				  image.setAttribute('src',img);
+					image.style.height="auto";
+					image.style.width = "100%";
+          console.log("IRRRRRR"+irr); 
+                    
+          
+                  var interiorgrid=document.createElement("div");
+                  interiorgrid.setAttribute('class','grid-container2');
+                  
+                  var item1=document.createElement("div");
+                  item1.setAttribute('class','grid-item');
+                  var t1=document.createElement("h6");
+                  var text1=document.createTextNode("IRR: "+irr);
+                  t1.appendChild(text1);
+                  item1.appendChild(t1);
+                  interiorgrid.appendChild(item1);
+
+                  var item2=document.createElement("div");
+                  item2.setAttribute('class','grid-item');
+                  var t2=document.createElement("h6");
+                  var text2=document.createTextNode("Project Cost: "+projectcost);
+                  t2.appendChild(text2);
+                  item2.appendChild(t2);
+                  interiorgrid.appendChild(item2);
+
+                  var item3=document.createElement("div");
+                  item3.setAttribute('class','grid-item');
+                  var t3=document.createElement("h6");
+                  var text3=document.createTextNode("Location: "+loc);
+                  t3.appendChild(text3);
+                  item3.appendChild(t3);
+                  interiorgrid.appendChild(item3);
+
+                  var item4=document.createElement("div");
+                  item4.setAttribute('class','grid-item');
+                  var t4=document.createElement("h6");
+                  var text4=document.createTextNode("Project Size: "+projectsize);
+                  t4.appendChild(text4);
+                  item4.appendChild(t4);
+                  interiorgrid.appendChild(item4);
+
+                  var item5=document.createElement("div");
+                  item5.setAttribute('class','grid-item');
+                  var t5=document.createElement("h6");
+                  var text5=document.createTextNode("Min Investment: "+creditrating);
+                  t5.appendChild(text5);
+                  item5.appendChild(t5);
+                  interiorgrid.appendChild(item5);
+
+                  var item6=document.createElement("div");
+                  item6.setAttribute('class','grid-item');
+                  var t6=document.createElement("h6");
+                  var text6=document.createTextNode("Project Length: "+projectlen);
+                  t6.appendChild(text6);
+                  item6.appendChild(t6);
+                  interiorgrid.appendChild(item6);  
+                    
+                
+
+                  var interiorgrid2=document.createElement("div");
+                  interiorgrid2.setAttribute('class','grid-container');
+                  
+                  var itemlist1=document.createElement("div");
+                  itemlist1.setAttribute('class','grid-item');
+                  var tt1=document.createElement("h6");
+                  var ttext1=document.createTextNode(amtraised+" Raised");
+                  tt1.appendChild(ttext1);
+                  itemlist1.appendChild(tt1);
+                  interiorgrid2.appendChild(itemlist1);
+
+                  var itemlist2=document.createElement("div");
+                  itemlist2.setAttribute('class','grid-item');
+                  var tt2=document.createElement("h6");
+                  var ttext2=document.createTextNode(projectcomp+"% Funded");
+                  tt2.appendChild(ttext2);
+                  itemlist2.appendChild(tt2);
+                  interiorgrid2.appendChild(itemlist2);
+
+
+                  var butt = document.createElement("BUTTON");
+                  butt.setAttribute('onclick', "window.location.href = 'houseidproj1.html'");
+                  butt.setAttribute('class','button1');
+                  var btext= document.createTextNode("More Info");
+                  var bhead=document.createElement("h6");
+                  bhead.appendChild(btext);
+                  butt.appendChild(bhead);
+                  //butt.style.color="white";
+                  //butt.style.backgroundColor="Green";  
+                  butt.style.borderRadius="50%";
+                  //butt.style.padding=" 0px 10px 0px";
+                  //butt.style.textAlign= "center";
+
+                    var t = document.createTextNode(name); 
+                    
+                    
+                    //This is the image section
+                    var pol= document.createElement("div");
+                    pol.setAttribute('class','polaroid');
+                    var linkp =document.createElement("a");
+                    linkp.setAttribute('href',"houseid" + query);
+                    linkp.appendChild(image);
+                    //linkp.style.backgroundColor="white";
+                    
+
+                    var lab = document.createTextNode("70");
+                    var p=document.createElement("p");
+                    p.appendChild(lab); 
+
+                    // This is the progress bar
+                    var prog= document.createElement("progress");
+                    prog.setAttribute('value',projectcomp);
+                    prog.setAttribute('max','100');
+                    prog.style.padding="10px 10px 10px 30px";
+                    prog.appendChild(p);
+
+                    var container= document.createElement("div");
+                    container.setAttribute('class','container');
+                    //container.style.padding="10px 20px";
+                    //container.style.text-align="center";
+                    //var linkc =document.createElement("a");
+                    //linkc.setAttribute('href',"inv.php" + query);
+                    //linkc.appendChild(t);
+                    
+                    var h = document.createElement("h4");
+                    h.appendChild(t); 
+                    h.style.color="#EDEDED";
+                    item.style.color="#EDEDED";
+                    h.style.padding="50px 10px 20px 30px"; 
+                    
+                   
+                   //link.style.font-family="'Nunito', sans-serif";
+                    //link.setAttribute('href',fwdlink);
+                    
+                    
+                    item.appendChild(linkp);
+                    item.appendChild(h);
+                    item.appendChild(interiorgrid);
+                    //item.appendChild(bar);
+                    item.appendChild(prog);
+                    item.appendChild(interiorgrid2);
+                    item.appendChild(butt);
+                    item.style.width= "100%";
+                    item.style.borderRadius="25px";
+                    item.style.boxShadow=" 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)";
+                    item.style.background="#1E5D7E";    
+
+                    document.getElementById("xyz").appendChild(item);
+                    var a = document.createElement('a');
+                
+                    }
+                    
+                    }
+
+                      
+
+    
+</script>
+</body>
+</head>
+</html> 

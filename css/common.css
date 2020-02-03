@@ -1,0 +1,297 @@
+
+/* layout
+===============================================================*/
+body,form,fieldset {
+	margin: 0;
+	padding:0;
+    -webkit-text-size-adjust: none;
+}
+
+fieldset {
+	border:none;
+}
+
+h1,h2,h3,h4,h5,h6,p,pre,blockquote,ul,ol,dl,dd,tr {
+	margin: 0;
+	padding:0;
+}
+
+blockquote,li,dt,dd {
+	margin:0;
+	padding:0;	
+}
+
+li {
+	list-style:none;
+}
+
+input,textarea {
+	font-size:1em;
+}
+
+img {
+	margin:0px;
+	padding:0px;
+	border: 0px;
+	vertical-align:bottom;
+}
+
+table {
+    border-collapse:collapse;
+}
+
+/* float, clear
+===============================================================*/
+.cf { zoom:1; }
+.cf:before, .cf:after { content:""; display:table; }
+.cf:after { clear:both; }
+
+.clear {
+	clear: both;
+	visibility: visible;
+}
+
+.left {
+	float:left;
+}
+
+.right {
+	float:right;
+}
+
+
+/* base
+===============================================================*/
+h1,h2,h3,h4,h5,h6,p,pre,blockquote,ul,ol,dl,dd,tr {
+	font-size: 12px;
+	line-height: 1.5em;
+}
+
+body {
+	height:100%;
+	color:#222222;
+	background-color:#ffffff;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+#gif {
+	width:100%;
+	height:100%;
+	padding:300px 0 0 0;
+	text-align:center;
+}
+
+
+/* font
+===============================================================*/
+a { 
+	color:#222222;
+	text-decoration:none;
+}
+ 
+a:visited {
+	color:#222222;
+	text-decoration:none;
+}
+
+a:hover {
+	color:#222222;
+	text-decoration: underline; 
+}
+
+a:active {
+	color:#222222;
+	text-decoration: underline; 
+}
+
+
+/* Contents
+===============================================================*/
+div.header {
+	height:272px;
+}
+
+div.header p {
+	width:105px;
+	float:right;
+}
+
+div.footer {
+	width:100%;
+	height:56px;
+	position:fixed;
+	bottom:0;
+	left:0;
+}
+
+/* mp11  */
+div.mp11 {
+	width:100%;
+	overflow:hidden;
+	margin:0 0 113px 0;
+}
+
+div.mp11 a {
+	display:block;
+	width:100%;	
+}
+
+div.mp11 div.box {
+	width:960px;
+	height:213px;
+	margin:0 auto;
+	position:relative;
+}
+
+div.mp11 div.box p.ph {
+	position:absolute;
+	top:0;
+	left:-9999px;
+}
+
+div.mp11 div.box p.ph img.hover {
+	display:none;
+	position:absolute;
+	top:0;
+	left:0;
+}
+
+div.mp11 div.box div.con {
+	width:960px;
+	height:213px;
+	background-color:#fafafa;
+	position:absolute;
+	top:0;
+	left:9999px;
+}
+
+div.mp11 div.box div.con p.bg {
+	display:none;
+	width:960px;
+	height:213px;
+	background-color:#f0f0f0;
+}
+
+div.mp11 div.box div.con p.logo {
+	display:none;
+	padding:0 0 23px 0;
+	position:absolute;
+	top:36px;
+	left:30px;
+}
+
+div.mp11 div.box div.con p.txt {
+	display:none;
+	font-size:48px;
+	color:#333333;
+	line-height:46px;
+	font-weight: 300;
+	position:absolute;
+	top:96px;
+	left:30px;
+}
+
+div.mp11 div.box div.con p.ar {
+	display:none;
+	width:33px;
+	position:absolute;
+	top:95px;
+	left:447px;
+}
+
+
+/* mp7  */
+div.mp7 {
+	width:100%;
+	overflow:hidden;
+	margin:0 0 113px 0;
+}
+
+div.mp7 a {
+	display:block;
+	width:100%;
+}
+
+div.mp7 div.box {
+	width:960px;
+	height:213px;
+	margin:0 auto;
+	position:relative;
+}
+
+div.mp7 div.box p.ph {
+	position:absolute;
+	top:0;
+	left:9999px;
+}
+
+div.mp7 div.box p.ph img.hover {
+	display:none;
+	position:absolute;
+	top:0;
+	left:0;
+}
+
+div.mp7 div.box div.con {
+	width:960px;
+	height:213px;
+	background-color:#fafafa;
+	position:absolute;
+	top:0;
+	left:-9999px;
+}
+
+div.mp7 div.box div.con p.bg {
+	display:none;
+	width:960px;
+	height:213px;
+	background-color:#f0f0f0;
+}
+
+div.mp7 div.box div.con p.logo {
+	display:none;
+	position:absolute;
+	top:36px;
+	right:30px;
+}
+
+div.mp7 div.box div.con p.txt {
+	display:none;
+	font-size:48px;
+	color:#333333;
+	text-align:right;
+	line-height:46px;
+	font-weight: 300;
+	clear:both;
+	position:absolute;
+	top:96px;
+	right:30px;
+}
+
+div.mp7 div.box div.con p.ar {
+	display:none;
+	width:33px;
+	position:absolute;
+	top:95px;
+	left:447px;
+}
+
+
+div.footer ul {
+	padding:0 0 0 30px;
+	float:left;
+}
+
+div.footer ul li {
+	padding:0 7px 0 0;
+	float:left;
+}
+
+div.footer p {
+	color:#b0b0b0;
+	width:464px;
+	text-align:right;
+	padding:10px 30px 0 0;
+	float:right;
+}
+
