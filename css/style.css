@@ -171,6 +171,7 @@ p.lead {
 .nav-menu.is-scrolling,
 .nav-menu.menu-is-open {
     background: linear-gradient(to right, var(--color-bg-1), var(--color-bg-2));
+    transition: background 500ms;
     
 
     /*background-color: rgb(74, 13, 143);
@@ -232,7 +233,13 @@ header {
     background-image: -ms-linear-gradient( 135deg, rgba(60, 8, 118, 0.8) 0%, rgba(250, 0, 118, 0.8) 100%);
     background-image: linear-gradient( 135deg, rgba(60, 8, 118, 0.8) 0%, rgba(250, 0, 118, 0.8) 100%);*/
     background: linear-gradient(to right, var(--color-bg-1), var(--color-bg-2));
+}
 
+.bg-top {
+    background-image: url("https://us.sunpower.com/sites/default/files/styles/hero_full_700px/public/web-version-sunpower-roof1-fi-11-12-18-output-2-1_0.jpg?itok=uL0fiEuX");
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
 }
 
 .bgg-gradient {

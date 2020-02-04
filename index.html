@@ -479,31 +479,31 @@
             }
 
             @media screen and (max-width: 768px) {
-              #timeline {
-                margin: 30px;
-                padding: 0px;
-                width: 90%;
-              }
-              #timeline:before {
-                left: 0;
-              }
-              #timeline .timeline-item .timeline-content {
-                width: 90%;
-                float: right;
-              }
-              #timeline .timeline-item .timeline-content:before, #timeline .timeline-item .timeline-content.right:before {
-                left: 10%;
-                margin-left: -6px;
-                border-left: 0;
-                border-right: 7px solid #2b2b2b;
-              }
-              #timeline .timeline-item .timeline-icon {
-                left: 0;
-              }
+                #timeline {
+                  margin: 30px;
+                  padding: 0px;
+                  width: 90%;
+                }
+                #timeline:before {
+                  left: 0;
+                }
+                #timeline .timeline-item .timeline-content {
+                  width: 90%;
+                  float: right;
+                }
+                #timeline .timeline-item .timeline-content:before, #timeline .timeline-item .timeline-content.right:before {
+                  left: 10%;
+                  margin-left: -6px;
+                  border-left: 0;
+                  border-right: 7px solid #2b2b2b;
+                }
+                #timeline .timeline-item .timeline-icon {
+                  left: 0;
+                }
 
             }
 
-            ------------------------------------------------
+---------------------------------------------------
 
             .dropdown {
               float: left;
@@ -518,7 +518,7 @@
               outline: none;
               color: white;
               padding-top: 8px;
-            // padding: 14px 16px;
+              /*padding: 14px 16px;*/
               background-color: inherit;
               font-family: 'Lato', sans-serif;
               text-transform: capitalize;
@@ -532,7 +532,11 @@
             #myForm1{
               border: 2px solid white;
               border-radius: 25px;
-              padding: 8%
+              padding: 8%;
+              background: #283048;  /* fallback for old browsers */
+              background: -webkit-linear-gradient(to right, #859398, #283048);  /* Chrome 10-25, Safari 5.1-6 */
+              background: linear-gradient(to right, #859398, #283048); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+              opacity : 0.9;
             }
 
             #submit{
@@ -567,7 +571,7 @@
             }
 
             .topnav a:hover, .dropdown:hover .dropbtn {
-              //background-color: #555;
+              /*background-color: #555;*/
               color: white;
             }
 
@@ -750,7 +754,7 @@
         </div>
   </div>
 
-  <header class="bg-gradient" id="home" style="padding-bottom:20px">
+  <header class="bg-gradient bg-top" id="home" style="padding-bottom:20px">
     <div class="container mt-5">
     </div>
         <br>
@@ -773,10 +777,10 @@
         <iframe name="destination" frameborder="0" style="width:0;height:0;border:0; border:none;" ></iframe>
         
         <div class="row">
-          <div class="col-0 col-md-2" style="padding-right: 20%"></div>
-          <div class="form-format" >
-              <center>
-                <div class="col-10	col-md-6">
+          <!--<div class="col-0 col-md-2" style="padding-right: 20%"></div>-->
+          <div class="form-format d-flex justify-content-around justify-content-md-start ml-md-5" >
+              
+                <div class="col-10	col-md-6 ">
                   
                   <form action="https://docs.google.com/forms/u/1/d/e/1FAIpQLSciUFSmBnDTCNPwyYP0GCYM2jaFx_ApQg5HBFQ92rA3KtTLtw/formResponse" method="POST" target="destination" id="myForm1" >
                         <br>
@@ -795,7 +799,7 @@
                         <button type="submit" id="submit" name="submit" class="btn btn-light submit" onclick="display()" >Submit</button>
                   </form>
                 </div>
-              </center>
+              
            </div>
           </div>
       </center>
