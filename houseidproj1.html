@@ -131,6 +131,10 @@ h1{
 background:#3594D2; 
 }
 
+#Msg{
+  display: none;
+}
+
 
 </style>
 </head>
@@ -156,6 +160,7 @@ background:#3594D2;
 
 
 <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
+
 <script>
   // Initialize Firebase
   var config = {
@@ -173,33 +178,27 @@ background:#3594D2;
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
 
-document.getElementById("Msg").style.display="none";
 
+c = 0;
 $(document).ready(function(){
   $("#enterbtn").click(function(){
   var ref = firebase.database().ref(); 
 	ref.on("value", function(snapshot){ 
-	snapshot.forEach(function(data) {
+	  snapshot.forEach(function(data) {
     if((data.key)==$("#house_id").val())
 	{
+    c++;
     document.getElementById("Msg").style.display="none";
 		var queryString = "?para1=" + data.key;
-         window.location.href = "projecttest.html" + queryString;
-
-	}
-  else {
-
+    window.location.href = "projecttest.html" + queryString;
+  }});
+  if(c==0){
     document.getElementById("Msg").style.display="block";
-    
   }
-
-	
-		
   });
-    
-	});
+  });
 });
-});
+
 </script>
 
 
