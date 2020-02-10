@@ -22,6 +22,15 @@ a {
   display: none;
 }
 
+.width-custom{
+  width: 75%;
+}
+
+@media (max-width: 480px){
+.width-custom {
+    width: 100%;
+}}
+
 a:hover,
 a:focus {
     color: #d6619c;
@@ -32,6 +41,7 @@ h1 {
     font-weight: 500;
     letter-spacing: 0px;
     line-height: 1.2;
+    color: #633991;
     margin-bottom: 1.5rem;
 }
 
@@ -123,8 +133,8 @@ p.lead {
     font-weight: 500;
     color: #633991;
     margin: 0.5rem;
-    padding: 0.7rem 1.6rem;
-    line-height: 1.8;
+    /*padding: 0.7rem 1.6rem;
+    line-height: 1.8;*/
 }
 
 .btn-group-lg>.btn,
@@ -252,7 +262,7 @@ header {
 }
 
 .tagline {
-    font-size: 23px;
+    font-size: 20px;
     font-weight: 300;
     color: #e5e5e5;
     max-width: 800px;
@@ -397,6 +407,20 @@ header {
     }
 }
 
+.uses{
+  color: #633991;
+  font-size: 2.1vw;
+  font-weight: 600;
+}
+
+@media(max-width:767px) {
+  .vanish{
+    display:none;
+  }
+  .uses{
+    font-size:18px;
+  }
+}
 
 /*  TABS
 ----------------------*/
@@ -945,7 +969,7 @@ position: absolute;
   -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h3, h4, h5, h6 {
   color: #3D4351;
   margin-top: 0;
 }
@@ -979,7 +1003,6 @@ a:hover {
 
 .container-fluid .row {
   padding: 0 0 4em 0;
-  margin-left: 20%;
 }
 .container-fluid .row:nth-child(even) {
   background: #F1F4F5;
@@ -1320,7 +1343,7 @@ a:hover {
     border:transparent;
     border-bottom: 2px solid rgba(230,230,230, 0.5);
     border-radius: 1%;
-    margin-bottom:25px;
+    margin-bottom:10px;
     color:#fff !important;
     font-size:13px;
     -webkit-transition: all 0.4s;

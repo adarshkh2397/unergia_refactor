@@ -532,11 +532,8 @@
             #myForm1{
               border: 2px solid white;
               border-radius: 25px;
-              padding: 8%;
-              background: #283048;  /* fallback for old browsers */
-              background: -webkit-linear-gradient(to right, #859398, #283048);  /* Chrome 10-25, Safari 5.1-6 */
-              background: linear-gradient(to right, #859398, #283048); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-              opacity : 0.9;
+              padding: 5%;
+              
             }
 
             #submit{
@@ -670,10 +667,7 @@
     <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N3RXTXX" height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </noscript>
   <!-- End Google Tag Manager (noscript) -->
-  <div class="bgcontain">
-      <div class="loader"></div>
-  </div>
-
+  
   <!-- Nav Menu -->
   <div class="nav-menu fixed-top">
         <div class="container">
@@ -754,10 +748,10 @@
         </div>
   </div>
 
-  <header class="bg-gradient bg-top" id="home" style="padding-bottom:20px">
+  <header class="bg-gradient" id="home" style="padding-bottom:20px; padding-top:30px;">
     <div class="container mt-5">
     </div>
-        <br>
+        
         <!-- <div class="row">
         <div class="col-6 col-lg-6">
         <div class="perspective-phone" style="float: center;z-index: 99;width:650px;padding:120px 0px 00px 10px">
@@ -766,26 +760,24 @@
             </div>
             </div> -->
     <center>
-        <h2 style="color:#fff;font-size: 4.5vw;">Unergia
+        <h2 style="color:#fff;font-size: 4.3vw;">Unergia
             <span class="name"></span>
         </h2>
         <br>
-        <br>
         <p class="tagline container" style="color:white">Unergia is a marketplace for residential, commercial and industrial buildings wanting to install solar panels</p>
-        <br>
-        <br>
-        <iframe name="destination" frameborder="0" style="width:0;height:0;border:0; border:none;" ></iframe>
         
-        <div class="row">
+        <!--<iframe name="destination" frameborder="0" style="width:0;height:0;border:0; border:none;" ></iframe>-->
+        
+        <div class="row mt-3 mt-md-0">
           <!--<div class="col-0 col-md-2" style="padding-right: 20%"></div>-->
-          <div class="form-format d-flex justify-content-around justify-content-md-start ml-md-5" >
+          <div class="form-format d-flex justify-content-around justify-content-md-between ml-md-5" >
               
-                <div class="col-10	col-md-6 ">
+                <div class="col-10 col-md-5 col-lg-4 col-xl-3 ">
                   
                   <form action="https://docs.google.com/forms/u/1/d/e/1FAIpQLSciUFSmBnDTCNPwyYP0GCYM2jaFx_ApQg5HBFQ92rA3KtTLtw/formResponse" method="POST" target="destination" id="myForm1" >
                         <br>
                         <h4 style="color:white">Get Free Solar Appointment</h4>
-                        <br><br>
+                        <br>
                         <input type="text"  maxlength="15" name="entry.856531729" required="required" pattern="[0-9]{10}" id="phone" required class="form" placeholder="10 Digit Phone Number" />
                         <input type="text" name="entry.1983665785" id="pincode" required="required" class="form" placeholder="6 Digit Pincode" />
                         <input type = "text" list = "type" name="entry.1804774440" class="form" placeholder="Type of Customer"> 
@@ -799,15 +791,20 @@
                         <button type="submit" id="submit" name="submit" class="btn btn-light submit" onclick="display()" >Submit</button>
                   </form>
                 </div>
+                
+                <div class="d-none d-lg-flex align-items-end">
+                    <img src="Building.png" width="350px" height="300px">
+                </div>
+               
               
            </div>
+
+           
           </div>
       </center>
   </header>
-
-
-
-    <!--<div id="counters" class=" client-logos my-5" style="margin:0px !important;padding:30px 0px 30px 0px;margin:0 auto; height:135px; background: #FAF6FB;">
+  
+  <!--<div id="counters" class=" client-logos my-5" style="margin:0px !important;padding:30px 0px 30px 0px;margin:0 auto; height:135px; background: #FAF6FB;">
         <div class="row" style="padding:0px;margin:0px;">
             <div class="col-md-4 col-sm-12">
                 <h1 style="margin-bottom:0px">
@@ -834,21 +831,38 @@
      
     </div>-->
 
+  <div class="section light-bg">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 d-flex justify-content-center">
+          <img src="images/Laptop1.png" width="200px" height="200px">
+        </div>
+        <div class="col-md-6 text-center pt-5">
+            <p class="uses">Get Competing Solar Quotes Online</p>
+            <br>
+            <p class="uses">Get 3D Model Design And Solar Report</p>
+        </div>
+        <div class="col-md-3 vanish">
+          <img src="images/Laptop2.png" width="200px" height="200px">
+        </div>
+      </div>
+    </div>
+  </div>
   
 	
-	<section class="howxiwattworks">
-		<div class="container-fluid">
-			<div class="howxwtworktitle wow fadeInDown animateme scrollme pt-5" data-when="span" data-from="0" data-to="1" data-translatey="-70" data-wow-duration="0.5s" data-wow-delay="0.4s" id="howxiwattworks"><h2>How Unergia Works</h2></div>
-			<div class="carouselboxhow owl-carousel" id="works" >
+	<section class="howxiwattworks m-auto width-custom">
+		<div class="container-fluid mt-5">
+			<div class="howxwtworktitle wow fadeInDown animateme scrollme mb-0 pb-0" data-when="span" data-from="0" data-to="1" data-translatey="-70" data-wow-duration="0.5s" data-wow-delay="0.4s" id="howxiwattworks"><h2>How Unergia Works</h2></div>
+			<div class="carouselboxhow owl-carousel">
 				
 				<div class="item">
 					<div class="row">
-						<div class="col-md-5">
+						<div class="col-md-6">
 							<div class="howworkstitlsscroll">Enquiry</div>
               <div class="howworkstitledetail">Submit your pin code, mobile number and last month's electricity amount on our form</div>
 							<!--<div class="howworkstitledetail">Rooftop owner submits a proposal to install solar panels on their rooftops. The solar panels will be installed at zero upfront cost and Unergia collects a monthly rent based on the energy produced. This will allow consumers to reduce their electricity bill from day one and after the length of contract the rooftop owner is handed over the solar panels.</div>-->
 						</div>
-						<div class="col-md-5">
+						<div class="col-md-6">
 							<div class="worksproposimg"><img src="images/27.png"></div>
 						</div>
 					</div>
@@ -856,11 +870,11 @@
 
 				<div class="item">
 					<div class="row">
-						<div class="col-md-5">
+						<div class="col-md-6">
 							<div class="howworkstitlsscroll">Site Visit</div>
 							<div class="howworkstitledetail">Unergia performs a site visit of your building to take note of various parameters and conducts due diligence on the proposed project. This ensures that the correct size of solar panels are installed for the rooftop owner based on their consumption needs.</div>
 						</div>
-						<div class="col-md-5">
+						<div class="col-md-6">
 							<div class="worksproposimg"><img src="images/Unergiawork_2.png"></div>
 						</div>
 					</div>
@@ -868,11 +882,11 @@
 
 				<div class="item">
 					<div class="row">
-						<div class="col-md-5">
+						<div class="col-md-6">
 							<div class="howworkstitlsscroll">Get Customised Quotes with Solar Report</div>
 							<div class="howworkstitledetail">Unergia sends you tailored solar quotes from certified solar installers to ensure quality solar systems at lowest prices along with a 3D modelled solar report. Unergia also gives you financing options from different financiers</div>
 						</div>
-						<div class="col-md-5">
+						<div class="col-md-6">
 							<div class="worksproposimg"><img src="images/Unergiawork_4.png"></div>
 						</div>
 					</div>
@@ -880,11 +894,11 @@
 
         <div class="item">
 					<div class="row">
-						<div class="col-md-5">
+						<div class="col-md-6">
 							<div class="howworkstitlsscroll">Installation</div>
 							<div class="howworkstitledetail">Solar system installed upon selection, the solar retailer would install the solar panels on the rooftop</div>
 						</div>
-						<div class="col-md-5">
+						<div class="col-md-6">
 							<div class="worksproposimg"><img src="images/Unergiawork_5.png"></div>
 						</div>
 					</div>
@@ -892,7 +906,7 @@
       </div>
 
 			<div class="row">
-				<div class="col-10 col-md-5">
+				<div class="col-12 col-md-7">
 					<div class="arrownavigation"></div>
 					<div class="dotsnavigations d-none d-lg-inline"></div>
 				</div>
@@ -928,12 +942,12 @@
 
 			$('.carouselboxhow').owlCarousel({
 			    items:1,
-			    margin:5,
+			    margin:10,
 			    nav:true,
 			    loop:true,
 			    dotsContainer: '.dotsnavigations',
-				navContainer: '.arrownavigation',
-				navText: ['<span class="previousarrowim">Previous <i class="fa fa-long-arrow-left" aria-hidden="true"></i></span>', '<span class="nextarrowim"><i class="fa fa-long-arrow-right" aria-hidden="true"></i> Next</span>'],
+				  navContainer: '.arrownavigation',
+				  navText: ['<span class="previousarrowim"><i class="fas fa-long-arrow-alt-left" aria-hidden="true"></i> Previous </span>', '<span class="nextarrowim"> Next   <i class="fa fa-long-arrow-alt-right" aria-hidden="true"></i></span>'],
 			});
 
 			$('a.readmorehowitworks').on('click',function(){
@@ -1403,7 +1417,15 @@
         <script src="js/app.js"></script>
 
         <script src="js/typed.min.js"></script>
-        <script>var typed = new Typed('.name', { strings: ["India’s Solar Marketplace","Multiple quotes from certified installers","Go Solar & Save Money"], typeSpeed: 40, backSpeed: 40, loop: true }); </script>
+        <script>
+          var typed = new Typed('.name', 
+          { 
+            strings: ["India’s Solar Marketplace","Multiple quotes from certified installers","Go Solar and Save Money"], 
+            typeSpeed: 40, 
+            backSpeed: 40, 
+            loop: true
+          }); 
+        </script>
         <script>
                $("#myForm").submit(function(e) {
                 $(':button[type="submit"]').attr('disabled' , true);
