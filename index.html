@@ -533,11 +533,16 @@
               border: 2px solid white;
               border-radius: 25px;
               padding: 5%;
-              
+              background: #16222A;  /* fallback for old browsers */
+              background: -webkit-linear-gradient(to right, #3A6073, #16222A);  /* Chrome 10-25, Safari 5.1-6 */
+              background: linear-gradient(to right, #3A6073, #16222A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
             }
 
             #submit{
               border-radius: 10px;
+              font-weight: 500;
+              color: #16222A;
             }
 
             .dropdown-content {
@@ -769,12 +774,12 @@
         
         <!--<iframe name="destination" frameborder="0" style="width:0;height:0;border:0; border:none;" ></iframe>-->
         
-        <div class="row d-flex justify-content-around justify-content-md-between ml-md-5 mt-3 mt-md-0">
+        <div class="row d-flex justify-content-around justify-content-md-between mt-3 mt-md-0 ml-md-0">
           <!--<div class="col-0 col-md-2" style="padding-right: 20%"></div>-->
-          <div class="col-10 col-sm-6 col-md-5 col-lg-4 col-xl-3">
+          <div class="col-10 col-sm-6 col-md-5 col-xl-4">
 
-            <div class="form-format">
-                <form action="https://docs.google.com/forms/u/1/d/e/1FAIpQLSciUFSmBnDTCNPwyYP0GCYM2jaFx_ApQg5HBFQ92rA3KtTLtw/formResponse" method="POST" target="destination" id="myForm1" >
+            <div class="form-format col-12 col-lg-10">
+                <form action="https://doc col-md-s.google.com/forms/u/1/d/e/1FAIpQLSciUFSmBnDTCNPwyYP0GCYM2jaFx_ApQg5HBFQ92rA3KtTLtw/formResponse" method="POST" target="destination" id="myForm1" >
                     <br>    
                     <h4 style="color:white">Get Free Solar Appointment</h4>
                     <br>
@@ -796,8 +801,8 @@
 
           <div class="d-none d-lg-inline col-lg-2 col-xl-3"></div>
                 
-          <div class="d-none d-lg-flex col-lg-6 col-xl-5 align-items-end justify-content-around px-0">
-              <img src="Building.png" width="85%" height="330px">
+          <div class="d-none d-md-flex col-md-5 col-xl-5 align-items-end justify-content-around px-0">
+              <img src="Building.png" width="85%" height="320px">
           </div>
       </center>
   </header>
@@ -1250,7 +1255,122 @@
           </div> 
         </div>
     <!-- // end .section -->
-
+    
+    <div class="section light-bg pb-5" id="testimonial">
+      <div class="container">
+        <div class="section-title">
+            <small></small>
+            <h2>Testimonials</h2>
+        </div>
+        <div class="row">
+          <div class="col-12 col-sm-6 col-lg-3 mb-4">
+              <div class="testimonial">
+                  <div class="card">
+                      <div class="layer t1"></div>
+                      <div class="content">
+                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam iusto ea tenetur quas facere minima obcaecati mollitia sed ipsum quod, eius repellat nihil quos. Saepe ipsa veritatis magni voluptates voluptatum.</p>
+                          <div class="image">
+                              <img  width="100px" src="images/person2.jpg" alt="">
+                          </div>
+                          <div class="details">
+                            <h2>
+                              <span>Backend developer</span>
+                              <br>
+                              <br>
+                              <p style="text-align:left;">
+                                  Bengaluru
+                                  <span style="float:right;">
+                                      30kW
+                                  </span>
+                              </p>
+                          </h2>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3 mb-4">
+              <div class="testimonial">
+                  <div class="card">
+                      <div class="layer t2"></div>
+                          <div class="content">
+                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam iusto ea tenetur quas facere minima obcaecati mollitia sed ipsum quod, eius repellat nihil quos. Saepe ipsa veritatis magni voluptates voluptatum.</p>
+                              <div class="image">
+                                  <img  width="100px" src="images/person1.jpg" alt="">
+                              </div>
+                              <div class="details">
+                                  <h2>
+                                      <span>Backend developer</span>
+                                      <br>
+                                      <br>
+                                      <p style="text-align:left;">
+                                          Mumbai
+                                          <span style="float:right;">
+                                              25kW
+                                          </span>
+                                      </p>
+                                  </h2>
+                              </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3 mb-4">
+              <div class="testimonial">
+                  <div class="card">
+                      <div class="layer t3"></div>
+                      <div class="content">
+                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam iusto ea tenetur quas facere minima obcaecati mollitia sed ipsum quod, eius repellat nihil quos. Saepe ipsa veritatis magni voluptates voluptatum.</p>
+                          <div class="image">
+                              <img width="100px"  src="images/person3.jpg" alt="">
+                          </div>
+                          <div class="details">
+                            <h2>
+                              <span>Backend developer</span>
+                              <br>
+                              <br>
+                              <p style="text-align:left;">
+                                  Delhi
+                                  <span style="float:right;">
+                                      40kW
+                                  </span>
+                              </p>
+                          </h2>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3 mb-4">
+              <div class="testimonial">
+                  <div class="card">
+                      <div class="layer t4"></div>
+                      <div class="content">
+                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam iusto ea tenetur quas facere minima obcaecati mollitia sed ipsum quod, eius repellat nihil quos. Saepe ipsa veritatis magni voluptates voluptatum.</p>
+                          <div class="image">
+                              <img width="100px"  src="images/person2.jpg" alt="">
+                          </div>
+                          <div class="details">
+                            <h2>
+                              <span>Backend developer</span>
+                              <br>
+                              <br>
+                              <p style="text-align:left;">
+                                  Mumbai
+                                  <span style="float:right;">
+                                    50kW
+                                  </span>
+                              </p>
+                          </h2>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
 
 
     
