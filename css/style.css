@@ -227,6 +227,13 @@ p.lead {
     }
 }
 
+/*WHATSAPP*/
+.whatsapp{
+  position: fixed;
+  top: 60%;
+  right: 0;
+  z-index: 2;
+}
 
 /* HERO
 ----------------------*/
@@ -433,11 +440,11 @@ option{
 }
 
 input:-webkit-autofill {
-  -webkit-box-shadow:0 0 0 50px white inset; /* Change the color to your own background color */
-  -webkit-text-fill-color: #999;
+  -webkit-box-shadow:0 0 0 50px #faffbd inset; /* Change the color to your own background color */
+  -webkit-text-fill-color: black;
 }
 input:-webkit-autofill:focus {
-  -webkit-box-shadow: 0 0 0 50px white inset,0 0 0 50px white inset;
+  -webkit-box-shadow: 0 0 0 50px white inset;
   -webkit-text-fill-color: #999;
 }
 
@@ -1456,12 +1463,11 @@ a:hover {
 
   .form{
     width: 100%;
-    padding: 13px;
+    padding: 14px;
     background:transparent;
     opacity: 1;
     border:transparent;
-    /*border-bottom: 2px solid rgba(230,230,230, 0.5);*/
-    border-bottom: 2px solid rgba(10,169,255, 0.5);
+    border-bottom: 2px solid rgba(230,230,230, 0.5);
     border-radius: 1%;
     margin-bottom:10px;
     color:#fff !important;
@@ -1469,6 +1475,13 @@ a:hover {
     -webkit-transition: all 0.4s;
     -moz-transition: all 0.4s;
     transition: all 0.4s;
+  }
+
+  #myForm1>.form{
+    border-bottom: 2px solid #c8ccd4;
+    padding: 14px 0;
+    font-size: 14px;
+    margin-bottom:0px;
   }
 
   .form:hover{
@@ -1637,3 +1650,389 @@ a:hover {
 }
 
 
+/*Elastic Input*/
+.phone , .pincode , .electricity {
+  position: relative;
+  margin: auto;
+  width: 100%;
+  max-width: 280px;
+}
+.phone .label {
+  position: absolute;
+  top: 16px;
+  left: 0;
+  font-size: 14px;
+  font-weight: 500;
+  transform-origin: 0 0;
+  transition: all 0.2s ease;
+}
+.phone svg {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 26px;
+  fill: none;
+}
+.phone svg path {
+  stroke: #c8ccd4;
+  stroke-width: 2;
+}
+.phone svg path d {
+  transition: all 0.2s ease;
+}
+#formborder {
+  position: absolute;
+  bottom: 0;
+  left: 120px;
+  height: 2px;
+  right: 0;
+  background: #c8ccd4;
+}
+.phone input {
+  -webkit-appearance: none;
+  width: 100%;
+  border: 0;
+  font-family: inherit;
+  padding: 12px 0;
+  height: 48px;
+  font-size: 14px;
+  font-weight: 500;
+  background: none;
+  border-radius: 0;
+  color: #fff;
+  transition: all 0.15s ease;
+}
+.phone input:not(:placeholder-shown) + span {
+  top: 7px;
+  transform: translateY(-26px) scale(0.75);
+}
+.phone input:focus {
+  background: none;
+  outline: none;
+}
+.phone input:focus + span {
+  color: #07f;
+  transform: translateY(-26px) scale(0.75);
+  transition-delay: 0.1s;
+}
+.phone input:focus + span + svg path {
+  stroke: #07f;
+  animation: elasticInput 0.4s ease forwards;
+}
+.phone input:focus + span + svg + #formborder {
+  background: #07f;
+}
+
+.pincode .label {
+  position: absolute;
+  top: 16px;
+  left: 0;
+  font-size: 14px;
+  font-weight: 500;
+  transform-origin: 0 0;
+  transition: all 0.2s ease;
+}
+.pincode svg {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 26px;
+  fill: none;
+}
+.pincode svg path {
+  stroke: #c8ccd4;
+  stroke-width: 2;
+}
+.pincode svg path d {
+  transition: all 0.2s ease;
+}
+
+.pincode input {
+  -webkit-appearance: none;
+  width: 100%;
+  border: 0;
+  font-family: inherit;
+  padding: 12px 0;
+  height: 48px;
+  font-size: 14px;
+  font-weight: 500;
+  background: none;
+  border-radius: 0;
+  color: #fff;
+  transition: all 0.15s ease;
+}
+.pincode input:not(:placeholder-shown) + span {
+  top: 7px;
+  transform: translateY(-26px) scale(0.75);
+}
+.pincode input:focus {
+  background: none;
+  outline: none;
+}
+.pincode input:focus + span {
+  color: #07f;
+  transform: translateY(-26px) scale(0.75);
+  transition-delay: 0.1s;
+}
+.pincode input:focus + span + svg path {
+  stroke: #07f;
+  animation: elasticInput 0.4s ease forwards;
+}
+.pincode input:focus + span + svg + #formborder {
+  background: #07f;
+}
+
+.electricity .label {
+  position: absolute;
+  top: 16px;
+  left: 0;
+  font-size: 14px;
+  font-weight: 500;
+  transform-origin: 0 0;
+  transition: all 0.2s ease;
+}
+.electricity svg {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 26px;
+  fill: none;
+}
+.electricity svg path {
+  stroke: #c8ccd4;
+  stroke-width: 2;
+}
+.electricity svg path d {
+  transition: all 0.2s ease;
+}
+
+.electricity input {
+  -webkit-appearance: none;
+  width: 100%;
+  border: 0;
+  font-family: inherit;
+  padding: 12px 0;
+  height: 48px;
+  font-size: 14px;
+  font-weight: 500;
+  background: none;
+  border-radius: 0;
+  color: #fff;
+  transition: all 0.15s ease;
+}
+.electricity input:not(:placeholder-shown) + span {
+  top: 7px;
+  transform: translateY(-26px) scale(0.75);
+}
+.electricity input:focus {
+  background: none;
+  outline: none;
+}
+.electricity input:focus + span {
+  color: #07f;
+  transform: translateY(-26px) scale(0.75);
+  transition-delay: 0.1s;
+}
+.electricity input:focus + span + svg path {
+  stroke: #07f;
+  animation: elasticInput 0.4s ease forwards;
+}
+.electricity input:focus + span + svg + #formborder {
+  background: #07f;
+}
+
+
+/*  SOLAR CALCULATOR
+----------------------*/
+
+#calculator{
+  background: #16222A;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #3A6073, #16222A);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #3A6073, #16222A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.pin .label ,
+.eBill .label ,
+.roofspace .label {
+  position: absolute;
+  color: #fff;
+  top: 16px;
+  left: 0;
+  font-size: 14px;
+  font-weight: 500;
+  transform-origin: 0 0;
+  transition: all 0.2s ease;
+}
+.pin svg,
+.eBill svg,
+.roofspace svg {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 26px;
+  fill: none;
+}
+
+.pin svg path,
+.eBill svg path,
+.roofspace svg path {
+  stroke: #c8ccd4;
+  stroke-width: 2;
+}
+.pin svg path d,
+.eBill svg path d,
+.roofspace svg path d {
+  transition: all 0.2s ease;
+}
+
+.pin input,
+.eBill input,
+.roofspace input {
+  -webkit-appearance: none;
+  width: 100%;
+  border: 0;
+  font-family: inherit;
+  padding: 12px 0;
+  height: 48px;
+  font-size: 14px;
+  font-weight: 500;
+  background: none;
+  border-radius: 0;
+  color: #fff;
+  transition: all 0.15s ease;
+}
+.pin input:not(:placeholder-shown) + span,
+.eBill input:not(:placeholder-shown) + span,
+.roofspace input:not(:placeholder-shown) + span{
+  top: 7px;
+  transform: translateY(-26px) scale(0.75);
+}
+
+.pin input:focus ,
+.eBill input:focus ,
+.roofspace input:focus {
+  background: none;
+  outline: none;
+}
+.pin input:focus + span ,
+.eBill input:focus + span ,
+.roofspace input:focus + span{
+  color: #07f;
+  transform: translateY(-26px) scale(0.75);
+  transition-delay: 0.1s;
+}
+.pin input:focus + span + svg path,
+.eBill input:focus + span + svg path,
+.roofspace input:focus + span + svg path {
+  stroke: #07f;
+  animation: elasticInput 0.4s ease forwards;
+}
+.pin input:focus + span + svg + #formborder,
+.eBill input:focus + span + svg + #formborder,
+.roofspace input:focus + span + svg + #formborder {
+  background: #07f;
+}
+
+@-moz-keyframes elasticInput {
+  50% {
+    d: path("M2,2 C21,17 46,25 74,25 C102,25 118,25 120,25");
+  }
+}
+@-webkit-keyframes elasticInput {
+  50% {
+    d: path("M2,2 C21,17 46,25 74,25 C102,25 118,25 120,25");
+  }
+}
+@-o-keyframes elasticInput {
+  50% {
+    d: path("M2,2 C21,17 46,25 74,25 C102,25 118,25 120,25");
+  }
+}
+@keyframes elasticInput {
+  50% {
+    d: path("M2,2 C21,17 46,25 74,25 C102,25 118,25 120,25");
+  }
+}
+
+
+.tile{
+  border-radius: 15px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.tile h3{
+  padding: 25px 0;
+  margin-bottom: 0px;
+  font-size: 1.75rem;
+}
+
+.tile h4{
+  padding: 25px 0;
+  margin-bottom: 0px;
+  font-size: 1.50rem;
+}
+
+.tile p{
+  color: #fff;
+  padding-bottom: 2px ;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color: #C02F1D;
+  border-radius: 0 0 15px 15px;
+}
+
+.one{
+  animation-delay: 0.4s;
+  -webkit-animation-delay: 0.4s;
+  -moz-animation-delay: 0.4s;
+}
+
+.two{
+  animation-delay: 0.8s;
+  -webkit-animation-delay: 0.8s;
+  -moz-animation-delay: 0.8s;
+}
+
+.three{
+  animation-delay: 1.2s;
+  -webkit-animation-delay: 1.2s;
+  -moz-animation-delay: 1.2s;
+}
+
+.animate{
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+  -webkit-animation-fill-mode: both;
+}
+
+@keyframes fadeRight{
+  from{
+    opacity: 0;
+    -webkit-transform: translate3d(100%,0,0);
+    transform: translate3d(100%,0,0) ;
+  }
+  to{
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@-webkit-keyframes fadeRight{
+  from{
+    opacity: 0;
+    -webkit-transform: translate3d(100%,0,0);
+    transform: translate3d(100%,0,0) ;
+  }
+  to{
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeRight {
+  animation-name: fadeRight;
+  -webkit-animation-name: fadeRight;
+}

@@ -784,15 +784,48 @@
                     <br>    
                     <h4 style="color:white">Get Free Solar Appointment</h4>
                     <br>
-                    <input type="text"  maxlength="15" name="entry.856531729" required="required" pattern="[0-9]{10}" id="phone" required class="form" placeholder="10 Digit Phone Number" />
-                    <input type="text" name="entry.1983665785" id="pincode" required="required" pattern="[0-9]{6}" class="form" placeholder="6 Digit Pincode" title="Pincode should be a 6 digit number"  />
+                    <!--<input type="text"  maxlength="15" name="entry.856531729" required="required" pattern="[0-9]{10}" id="phone" required class="form" placeholder="10 Digit Phone Number" />
+                      <input type="text" name="entry.1983665785" id="pincode" required="required" pattern="[0-9]{6}" class="form" placeholder="6 Digit Pincode" title="Pincode should be a 6 digit number"  />
                     <select type = "text" name="entry.1804774440" class="form" required> 
                       <option selected="true" disabled="disabled" value="">Type of Customer</option>
                       <option>Residential</option>
                       <option>Commercial</option>
                       <option>Industrial</option>
                     </select>
-                    <input type="text" name="entry.378508151" id="electricity" required="required" class="form" placeholder="Last Month's Electricity Bill" />
+                    <input type="text" name="entry.378508151" id="electricity" required="required" class="form" placeholder="Last Month's Electricity Bill" />-->
+                    <label for="phone" class="phone">
+                      <input type="text" id="phone" placeholder="&nbsp;"  maxlength="15" name="entry.856531729" required="required" pattern="[0-9]{10}" required>
+                      <span class="label">10 Digit Phone Number</span>
+                      <svg width="120px" height="26px" viewBox="0 0 120 26">
+                        <path d="M0,25 C21,25 46,25 74,25 C102,25 118,25 120,25"></path>
+                      </svg>
+                      <span id="formborder"></span>
+                    </label>
+                    <br><br>
+                    <label for="pincode" class="pincode">
+                      <input type="text" id="pincode" placeholder="&nbsp;"  maxlength="15" name="entry.1983665785" id="pincode" required="required" pattern="[0-9]{6}" required>
+                      <span class="label">6 Digit Pincode</span>
+                      <svg width="120px" height="26px" viewBox="0 0 120 26">
+                        <path d="M0,25 C21,25 46,25 74,25 C102,25 118,25 120,25"></path>
+                      </svg>
+                      <span id="formborder"></span>
+                    </label>
+                    <br><br>
+                    <select type = "text" name="entry.1804774440" class="form" required> 
+                      <option selected="true" disabled="disabled" value="">Type of Customer</option>
+                      <option>Residential</option>
+                      <option>Commercial</option>
+                      <option>Industrial</option>
+                    </select>
+                    <br><br>
+                    <label for="electricity" class="electricity">
+                      <input type="text" id="electricity" placeholder="&nbsp;"  name="entry.378508151" required="required">
+                      <span class="label">Last Month's Electricity Bill</span>
+                      <svg width="120px" height="26px" viewBox="0 0 120 26">
+                        <path d="M0,25 C21,25 46,25 74,25 C102,25 118,25 120,25"></path>
+                      </svg>
+                      <span id="formborder"></span>
+                    </label>
                     <!-- Subject -->
                     <button type="submit" id="submit" name="submit" class="btn btn-light submit" onclick="display()" >Submit</button>
                 
@@ -836,6 +869,13 @@
         </div>
      
     </div>-->
+
+  <div class="whatsapp">
+      <a class="d-md-none" href="https://wa.me/919833866055?text=Hello%20Unergia%2C%20I%20want%20to%20go%20solar!%E2%9C%A8">
+        <img height="30" width="30" src="images/Whatsapp.png">
+      </a>
+      <br>
+  </div>
 
   <div class="section light-bg py-0">
     <div class="container-fluid px-2 pt-3 pt-md-2">
@@ -1667,55 +1707,110 @@
     </div>
     <!-- // end .section -->
 
+    <div class="section" id="calculator">
+      <div class="container">
+        <div class="section-title">
+          <small></small>
+          <h2 style="color: #fff;">Solar Calculator</h2>
+        </div>
+        <div class="row">
+          <div class="col text-center py-2">
+            <button type="button" class="btn btn-outline-success res" value="Residential">Residential</button>
+          </div>
+          <div class="col text-center py-2">
+            <button type="button" class="btn btn-outline-success com" value="Commercial">Commercial</button>
+          </div>    
+          <div class="col text-center py-2">
+            <button type="button" class="btn btn-outline-success ind" value="Industrial">Industrial</button>
+          </div>    
+        </div>
+        <form method="POST" target="destination" id="cal"  onsubmit="this.submit();this.reset();">
+          <div class="row">
+            <div class="col-12 col-md mx-2 my-3">
+              <label for="pin" class="pin d-inline">
+                <input type="text" id="pin" placeholder="&nbsp;"  maxlength="15" name="pin" required="required" pattern="[0-9]{6}" title="Pincode should be a 6 digit number" required>
+                <span class="label">Pincode</span>
+                <svg width="120px" height="26px" viewBox="0 0 120 26">
+                  <path d="M0,25 C21,25 46,25 74,25 C102,25 118,25 120,25"></path>
+                </svg>
+                <span id="formborder"></span>
+              </label>
+            </div>
+            <div class="col-12 col-md mx-2 my-3 ">
+              <label for="eBill" class="eBill d-inline">
+                <input type="text" id="eBill" placeholder="&nbsp;" name="eBill" required="required" required>
+                <span class="label">Electricity Bill</span>
+                <svg width="120px" height="26px" viewBox="0 0 120 26">
+                  <path d="M0,25 C21,25 46,25 74,25 C102,25 118,25 120,25"></path>
+                </svg>
+                <span id="formborder"></span>
+              </label>
+            </div>
+                
+            <div class="col-12 col-md mx-2 my-3">
+              <label for="roofspace" class="roofspace d-inline">
+                <input type="text" id="roofspace" placeholder="&nbsp;" name="roofspace" required="required" required>
+                <span class="label">Roofspace Available(in sq.ft)</span>
+                <svg width="120px" height="26px" viewBox="0 0 120 26">
+                  <path d="M0,25 C21,25 46,25 74,25 C102,25 118,25 120,25"></path>
+                </svg>
+                <span id="formborder"></span>
+              </label>
+            </div> 
+          </div> 
+          <div class="row">
+            <div class="col-12 text-center">
+              <a class="btn btn-primary" id="estimate" type="submit" href="calculator.html" role="button">Submit</a>
+            </div>
+          </div>
+         </form> 
+      </div>
+    </div>
 
+    <script src="js/calculator.js"></script>
 
     <div class="section bg-gradient pb-4 pt-2" id="contactus">
-        <div class="container">
-            <div class="row mt-2">
+            <div class="container">
+              <div class="row mt-2">
                 <div class="col-lg-12">
-
-                    <div class="call-to-action">
-
-                        <div class="box-icon">
-                            <span class="ti-mobile gradient-fill ti-3x"></span>
-                        </div>
-                        <h2> Enquiries </h2>
-                  <!--       <p class="" style="color:#d3d3d3">Add some text here. </p>
-                   -->
-<br><br>
-                        <div class="inner contact">
-                <!-- Form Area -->
-                <div class="contact-form">
-                    <!-- Form -->
-                    <form id="myform" method="post" action="mailer.php">
-                        <div class="row">
-                            
-                        <!-- Left Inputs -->
-                        <div class="col-sm-6 wow animated slideInLeft" data-wow-delay=".5s">
-                            <!-- Name -->
-                            <input type="text" name="name" id="name" required="required" class="form" placeholder="Name" style="margin-bottom: 26px;" />
-                            <!-- Email -->
-                            <input type="email" name="email" id="mail" required="required" class="form" placeholder="Email" style="margin-bottom: 26px;" />
-                            <!-- Subject -->
-                            <input type="text"  maxlength="15" name="phone" pattern="[0-9]{10}" id="phone" required class="form" placeholder="Phone Number" style="margin-bottom: 26px;" />
-                        </div><!-- End Left Inputs -->
-                        <!-- Right Inputs -->
-                        <div class="col-sm-6 wow animated slideInRight" data-wow-delay=".5s">
-                            <!-- Message -->
-                            <textarea name="message" id="message" required class="form textarea"  placeholder="Message"></textarea>
-                        </div><!-- End Right Inputs -->
-                        </div>
-                        <button type="submit" id="submit" name="submit" class="btn btn-light submit">Submit</button>
-
-                    </form>
-                </div><!-- End Contact Form Area -->
-            </div><!-- End Inner -->
-
-
+                  <div class="call-to-action">
+                    <div class="box-icon">
+                        <span class="ti-mobile gradient-fill ti-3x"></span>
                     </div>
+                    <h2> Enquiries </h2>
+                    <!--<p class="" style="color:#d3d3d3">Add some text here. </p>-->
+                    <br><br>
+                    <div class="inner contact">
+                      <!-- Form Area -->
+                      <div class="contact-form">
+                        <!-- Form -->
+                        <form id="myform" method="post" action="mailer.php">
+                          <div class="row">
+                              
+                            <!-- Left Inputs -->
+                            <div class="col-sm-6 wow animated slideInLeft" data-wow-delay=".5s">
+                                <!-- Name -->
+                                <input type="text" name="name" id="name" required="required" class="form" placeholder="Name" style="margin-bottom: 26px;" />
+                                <!-- Email -->
+                                <input type="email" name="email" id="mail" required="required" class="form" placeholder="Email" style="margin-bottom: 26px;" />
+                                <!-- Subject -->
+                                <input type="text"  maxlength="15" name="phone" pattern="[0-9]{10}" id="phone" required class="form" placeholder="Phone Number" style="margin-bottom: 26px;" />
+                            </div><!-- End Left Inputs -->
+                            <!-- Right Inputs -->
+                            <div class="col-sm-6 wow animated slideInRight" data-wow-delay=".5s">
+                                <!-- Message -->
+                                <textarea name="message" id="message" required class="form textarea"  placeholder="Message"></textarea>
+                            </div><!-- End Right Inputs -->
+                          </div>
+                          <button type="submit" id="submit" name="submit" class="btn btn-light submit">Submit</button>
+                        </form>
+                      </div><!-- End Contact Form Area -->
+                    </div><!-- End Inner -->
+                  </div>
                 </div>
-            </div>
+              </div>
         </div>
+    </div>
         <!-- // end .section -->
 
         <div class="section light-bg" id="contact" style="padding-top:10px;">
@@ -1777,7 +1872,7 @@
               var pinCode      = $("#pincode").val();
               var typeOfCustomer = $('select').val();
               var electricBill     = $("#electricity").val();
-              console.log(typeOfCustomer);
+            
               if(mobileNumber.length == 10 && pinCode.length == 6 && typeOfCustomer != null && electricBill != '' )
                 {
                   swal({
@@ -1806,6 +1901,7 @@
       <script src="js/owl.carousel.min.js"></script>
               <!-- Custom JS -->
       <script src="js/script.js"></script>
+      
       <script src="js/particles.min.js"></script>
       <script src="js/app.js"></script>
 
