@@ -56,16 +56,16 @@ $('#estimate').on('click', (e)=> {
 
         pin = pinCode.substring(0,2);
         statePrice = Number(state[pin]);
-        console.log(typeOfCustomer , statePrice);
+        //console.log(typeOfCustomer , statePrice);
         monthlyUnits = eBill / statePrice;
 
         //MONTHLY SAVINGS
-        monthlySavings = statePrice * monthlyUnits;
+        monthlySavings = Math.round(statePrice * monthlyUnits);
         
         //SYSTEM SIZE CALCULATION
         size1 = Number((eBill/(statePrice*116)).toFixed(2));
         size2 = Number((roofSpace/100).toFixed(2));
-        console.log(size1 , size2);
+        //console.log(size1 , size2);
         if(size1 <= size2){
             systemSize = size1;
         }else{
@@ -94,8 +94,8 @@ $('#estimate').on('click', (e)=> {
         }
         lowerSystemCost = Math.round(lowerSystemCost);
         upperSystemCost = Math.round(upperSystemCost);
-        console.log(monthlySavings , systemSize , areaRequired )
-        console.log(lowerSystemCost  , upperSystemCost);
+        //console.log(monthlySavings , systemSize , areaRequired )
+        //console.log(lowerSystemCost  , upperSystemCost);
 
         //MONTHLY SOLAR UNITS
         monthlySolarUnits = Math.round(systemSize * 116) ;
@@ -103,11 +103,11 @@ $('#estimate').on('click', (e)=> {
         //LIFETIME SAVINGS
         lifetimeSavings = Math.round((monthlySavings*(Math.pow(1.01,25)-1))*100);
 
-        console.log("Lifetime" , lifetimeSavings);
+        //console.log("Lifetime" , lifetimeSavings);
 
         //TREES SAVED
         treesSaved = Math.round(systemSize*41.6);
-        console.log("Trees" , treesSaved);
+        //console.log("Trees" , treesSaved);
 
         localStorage.setItem('MS', monthlySavings);
         localStorage.setItem('SS', systemSize);

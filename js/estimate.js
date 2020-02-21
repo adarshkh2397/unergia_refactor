@@ -38,10 +38,33 @@ window.onload = function() {
         document.getElementById("systemCost").innerHTML = lowerSystemCost+" - "+ upperSystemCost ;
     }
 
+    if(lifetimeSavings.length >= 8){
+        lifetimeSavings = (Number(lifetimeSavings)/10000000).toFixed(2);
+        document.getElementById("lifetimeSavings").innerHTML = lifetimeSavings+" Cr." ;
+    } 
+    else if(lifetimeSavings.length == 7){
+        lifetimeSavings = (Number(lifetimeSavings)/100000).toFixed(2);
+        document.getElementById("lifetimeSavings").innerHTML = lifetimeSavings+" L" ;
+    }
+    else if(lifetimeSavings.length == 6){
+        lifetimeSavings = (Number(lifetimeSavings)/100000).toFixed(2);
+        document.getElementById("lifetimeSavings").innerHTML = lifetimeSavings+" L" ;
+    }
+    else if(lifetimeSavings.length == 5){
+        lifetimeSavings = (Number(lifetimeSavings)/1000).toFixed(2);
+        document.getElementById("lifetimeSavings").innerHTML = lifetimeSavings+" K" ;
+    }
+    else if(lifetimeSavings.length == 3){
+        lifetimeSavings = (Number(lifetimeSavings)/1000).toFixed(2);
+        document.getElementById("lifetimeSavings").innerHTML = lifetimeSavings+" K" ;
+    }
+    else{
+        document.getElementById("lifetimeSavings").innerHTML = "Rs. "+lifetimeSavings ;
+    }
+
     document.getElementById("monthlySavings").innerHTML = "Rs. "+monthlySavings;
     document.getElementById("systemSize").innerHTML = systemSize + " kW";
     document.getElementById("areaRequired").innerHTML = areaRequired + " sq.ft" ;
     document.getElementById("solarUnits").innerHTML = solarUnits ;
-    document.getElementById("lifetimeSavings").innerHTML = "Rs. "+lifetimeSavings ;
     document.getElementById("treesSaved").innerHTML = treesSaved ;
 }
