@@ -160,6 +160,7 @@
         }
             
     </style>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
 <body class="bg-gradient container-fluid">
@@ -281,7 +282,7 @@
         <br>
         <form method="POST" target="destination" id="calcForm"  onsubmit="this.reset();return false;">
             <input type="text"  maxlength="15" required="required" pattern="[0-9]{10}" id="phoneNumber" required class="form1" placeholder="10 Digit Phone Number" />
-            <button type="submit" id="submit" name="submit" class="btn btn-dark">Submit</button>
+            <button type="submit" id="submit" name="submit" class="btn btn-dark" onclick="reach()">Submit</button>
             <span id="treesSaved" class="pl-3 pr-2"></span>
             <span class="save"><img height="30" width="30" class="pr-2" src="images/tree.png"> Saved</span>
         </form>
@@ -303,6 +304,19 @@
     </footer>
 
 
+    <script>
+        function reach() {
+          var mobileNumber = $("#phoneNumber").val();
+        
+          if(mobileNumber.length == 10)
+            {
+              swal({
+                  text: "We Will Contact You Soon!",
+                  icon: "success",
+                });
+             } 
+        }
+    </script>
 
 
     <!-- Custom JS -->
