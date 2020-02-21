@@ -43,4 +43,5 @@ window.onload = function() {
     document.getElementById("areaRequired").innerHTML = areaRequired + " sq.ft" ;
     document.getElementById("solarUnits").innerHTML = solarUnits ;
     document.getElementById("lifetimeSavings").innerHTML = "Rs. "+lifetimeSavings ;
+    document.getElementById("treesSaved").innerHTML = treesSaved ;
 }

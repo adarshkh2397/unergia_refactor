@@ -57,19 +57,182 @@
         body {
                 overflow-x: hidden !important;
         }
+
+        .drop:hover{
+              background-color:rgba(0,0,0,0.2);
+        }
+
+        .navbar-dark .navbar-nav .nav-link {
+                color: #fff;
+         }
+
+        .dropdown {
+              float: left;
+              font-family: 'Lato', sans-serif;
+              text-transform: capitalize;
+              overflow: hidden;
+            }
+
+        .dropdown .dropbtn {
+            font-size: 15px;    
+            border: none;
+            outline: none;
+            color: white;
+            padding-top: 8px;
+            /*padding: 14px 16px;*/
+            background-color: inherit;
+            font-family: 'Lato', sans-serif;
+            text-transform: capitalize;
+            margin: 0;
+        }
+
+        .form-format{
+        border: #e6e6e6;
+        }
+
+
+        .dropdown-content {
+            display: none;
+            font-family: 'Lato', sans-serif;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            text-transform: capitalize;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            font-size: 15px; 
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            font-family: 'Lato', sans-serif;
+            text-transform: capitalize;
+            display: block;
+            text-align: left;
+        }
+
+        .topnav a:hover, .dropdown:hover .dropbtn {
+            /*background-color: #555;*/
+            color: white;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #badcfc;
+            color: black;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        @media screen and (max-width: 600px) {
+            .topnav a:not(:first-child), .dropdown .dropbtn {
+            display: none;
+            }
+            .topnav a.icon {
+            float: right;
+            display: block;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .topnav.responsive {position: relative;}
+            .topnav.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+            }
+            .topnav.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+            }
+            .topnav.responsive .dropdown {float: none;}
+            .topnav.responsive .dropdown-content {position: relative;}
+            .topnav.responsive .dropdown .dropbtn {
+            display: block;
+            width: 100%;
+            text-align: left;
+            }
+        }
+            
     </style>
 </head>
 
-<body class="light-bg">
+<body class="bg-gradient container-fluid">
     <!-- Google Tag Manager (noscript) -->
     <noscript>
         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N3RXTXX" height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <section class="light-bg wow fadeIn m-auto" style="visibility: visible; animation-name: fadeIn;">
+     <!-- Nav Menu -->
+  <div class="nav-menu fixed-top"  style="height: 60px;" >
+    <div class="container">
+        <div class="row my-0">
+            <div class="col-md-12 py-0">
+                <nav class="navbar navbar-dark navbar-expand-lg" style="color:#fff">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="logo.png" width="60px" class="img-fluid" alt="logo">
+                    </a>
+                    <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>-->
+
+                    <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link " href="index.html">HOME
+                                    <span class="sr-only">(current)</span>
+                                </a>
+                            </li>
+                    </ul>
+                    <!--<div class="collapse navbar-collapse" id="navbar">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link " href="index.html">HOME
+                                    <span class="sr-only">(current)</span>
+                                </a>
+                            </li>
+                           <li class="nav-item">
+                                <a class="nav-link" href="#about">ABOUT US</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#customer">WHY UNERGIA ?</a>
+                            </li>
+                              
+                            
+                            <li class="nav-item">
+
+                              <div class="dropdown">
+                                <button class="dropbtn">LOGIN 
+                                  <i class="fa fa-caret-down"></i>
+                                </button>
+                                     
+                                <div class="dropdown-content">
+                                    <a href="signup.php">Investor</a>
+                                    <a href="houseid.html">Rooftop</a>
+                                    <a href="houseidproj1.html">Project Proposal</a>
+                                </div>
+                              </div> 
+                            </li>
+                            <li class="nav-item">
+                                <a href="#contactus" class="btn btn-outline-light my-3 my-sm-0 ml-lg-3">CONTACT US</a>
+                            </li>-->
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+   </div>
+
+    <section class="wow fadeIn m-auto pt-5" style="visibility: visible; animation-name: fadeIn;">
         <div class="container">
-            <div class="row justify-content-center pt-4" id="estimate">
+            <div class="row justify-content-center pt-4" id="estimator">
                 <div class="col-6 col-lg-4 text-center px-1 px-lg-5">
                     <div class="tile one animate fadeRight">
                         <h3 id="monthlySavings"></h3>
@@ -111,6 +274,31 @@
         </div>
     </section>
 
+    <div class="container text-center my-5 three animate fadeIn">
+        <h4 style="color: #660033;">To get Customised Solar Design & Multiple Solar Quotes</h4>
+        <br>
+        <form method="POST" target="destination" id="calcForm"  onsubmit="this.submit();this.reset(); return false;">
+            <input type="text"  maxlength="15" required="required" pattern="[0-9]{10}" id="phoneNumber" required class="form1" placeholder="10 Digit Phone Number" />
+            <button type="submit" id="submit" name="submit" class="btn btn-dark">Submit</button>
+            <span id="treesSaved" class="pl-3 pr-2"></span>
+            <span class="save"><img height="30" width="30" class="pr-2" src="images/tree.png"> Saved</span>
+        </form>
+    </div>
+
+    <footer class="mt-4 text-center">
+        <p style="color:#fff;">
+            <small>COPYRIGHT © UNERGIA 2020. ALL RIGHTS RESERVED.
+            </small>
+        </p>
+
+        <small>
+            <a href="#" class="m-2" style="color: #fff;">PRESS</a>
+            <a href="#" class="m-2" style="color: #fff;">TERMS</a>
+            <a href="#" class="m-2" style="color: #fff;">PRIVACY</a>
+        </small>
+
+    </footer>
+
 
 
 
@@ -139,6 +327,11 @@
         crossorigin="anonymous">
     </script>
     <script src="js/bootstrap.bundle.min.js"></script>
+            
+        <script src="js/script.js"></script>
+    
+        <script src="js/particles.min.js"></script>
+        <script src="js/app.js"></script>
     <script src="js/estimate.js"></script>
     
 </body>
