@@ -123,5 +123,8 @@ $('#estimate').on('click', (e)=> {
 });
 
 
+$("#cal").submit(function(e) {
+    e.preventDefault();
+});
 
 
