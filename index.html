@@ -695,7 +695,7 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#about">ABOUT US</a>
+                                    <a class="nav-link" href="#calculator">SOLAR ESTIMATOR</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#customer">WHY UNERGIA ?</a>
@@ -827,8 +827,9 @@
                       <span id="formborder"></span>
                     </label>
                     <!-- Subject -->
-                    <button type="submit" id="submit" name="submit" class="btn btn-light submit" onclick="display()" >Submit</button>
-                
+                    <div class="col-12 text-center mt-3">
+                      <button type="submit" id="submit" name="submit" class="btn btn-light submit" onclick="display()" >Submit</button>
+                    </div> 
                 </form>
             </div>
 
@@ -1707,11 +1708,11 @@
     </div>
     <!-- // end .section -->
 
-    <div class="section" id="calculator">
+    <div class="section bg-gradient" id="calculator">
       <div class="container">
         <div class="section-title">
           <small></small>
-          <h2 style="color: #fff;">Solar Calculator</h2>
+          <h2 style="color: #fff;">Solar Estimator</h2>
         </div>
         <div class="row">
           <div class="col text-center py-2">
@@ -1738,7 +1739,7 @@
             </div>
             <div class="col-12 col-md mx-2 my-3 ">
               <label for="eBill" class="eBill d-inline">
-                <input type="text" id="eBill" placeholder="&nbsp;" name="eBill" required="required" required>
+                <input type="number" id="eBill" placeholder="&nbsp;" name="eBill" required="required" pattern="[0-9]{10}" required>
                 <span class="label">Electricity Bill</span>
                 <svg width="120px" height="26px" viewBox="0 0 120 26">
                   <path d="M0,25 C21,25 46,25 74,25 C102,25 118,25 120,25"></path>
@@ -1749,7 +1750,7 @@
                 
             <div class="col-12 col-md mx-2 my-3">
               <label for="roofspace" class="roofspace d-inline">
-                <input type="text" id="roofspace" placeholder="&nbsp;" name="roofspace" required="required" required>
+                <input type="number" id="roofspace" placeholder="&nbsp;" name="roofspace" required="required" pattern="[0-9]{10}" required>
                 <span class="label">Roofspace Available(in sq.ft)</span>
                 <svg width="120px" height="26px" viewBox="0 0 120 26">
                   <path d="M0,25 C21,25 46,25 74,25 C102,25 118,25 120,25"></path>
@@ -1763,6 +1764,8 @@
               <button type="submit" id="estimate" class="btn btn-light submit">Submit</button>
             </div>
           </div>
+          <br>
+          <p class="text-center d-none nullCustomer" style="color: red;" >Please choose the type of customer</p>
          </form> 
       </div>
     </div>
@@ -1770,7 +1773,7 @@
     <script src="js/calculator.js"></script>
 
     <div class="section bg-gradient pb-4 pt-2" id="contactus">
-            <div class="container">
+           <!--<div class="container">
               <div class="row mt-2">
                 <div class="col-lg-12">
                   <div class="call-to-action">
@@ -1778,42 +1781,42 @@
                         <span class="ti-mobile gradient-fill ti-3x"></span>
                     </div>
                     <h2> Enquiries </h2>
-                    <!--<p class="" style="color:#d3d3d3">Add some text here. </p>-->
+                   
                     <br><br>
                     <div class="inner contact">
-                      <!-- Form Area -->
+                      
                       <div class="contact-form">
-                        <!-- Form -->
+                       
                         <form id="myform" method="post" action="mailer.php">
                           <div class="row">
                               
-                            <!-- Left Inputs -->
+                            
                             <div class="col-sm-6 wow animated slideInLeft" data-wow-delay=".5s">
-                                <!-- Name -->
+                                
                                 <input type="text" name="name" id="name" required="required" class="form" placeholder="Name" style="margin-bottom: 26px;" />
-                                <!-- Email -->
+                                
                                 <input type="email" name="email" id="mail" required="required" class="form" placeholder="Email" style="margin-bottom: 26px;" />
-                                <!-- Subject -->
+                                
                                 <input type="text"  maxlength="15" name="phone" pattern="[0-9]{10}" id="phone" required class="form" placeholder="Phone Number" style="margin-bottom: 26px;" />
-                            </div><!-- End Left Inputs -->
-                            <!-- Right Inputs -->
+                            </div>
+                            
                             <div class="col-sm-6 wow animated slideInRight" data-wow-delay=".5s">
-                                <!-- Message -->
+                                
                                 <textarea name="message" id="message" required class="form textarea"  placeholder="Message"></textarea>
-                            </div><!-- End Right Inputs -->
+                            </div>
                           </div>
                           <button type="submit" id="submit" name="submit" class="btn btn-light submit">Submit</button>
                         </form>
-                      </div><!-- End Contact Form Area -->
-                    </div><!-- End Inner -->
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-        </div>
+        </div>-->
     
         <!-- // end .section -->
 
-        <div class="section light-bg" id="contact" style="padding-top:10px;">
+        <div class="section light-bg" id="contact">
             <div class="container">
                 <div class="row mt-2">
                     <div class="col-lg-6 text-center text-lg-left">
