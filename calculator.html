@@ -281,10 +281,20 @@
         <h4 style="color: #660033;">To get Customised Solar Design & Multiple Solar Quotes</h4>
         <br>
         <form method="POST" target="destination" id="calcForm"  onsubmit="this.reset();return false;">
-            <input type="text"  maxlength="15" required="required" pattern="[0-9]{10}" id="phoneNumber" required class="form1" placeholder="10 Digit Phone Number" />
-            <button type="submit" id="submit" name="submit" class="btn btn-dark" onclick="reach()">Submit</button>
-            <span id="treesSaved" class="pl-3 pr-2"></span>
-            <span class="save"><img height="30" width="30" class="pr-2" src="images/tree.png"> Saved</span>
+            <!--<input type="text"  maxlength="15" required="required" pattern="[0-9]{10}" id="phoneNumber" required class="form1" placeholder="10 Digit Phone Number" />-->
+            <label for="phoneNumber" class="phoneNumber">
+                <input type="text" id="phoneNumber" placeholder="&nbsp;"  maxlength="15" required="required" pattern="[0-9]{10}" required>
+                <span class="label">10 Digit Phone Number</span>
+                <svg width="120px" height="26px" viewBox="0 0 120 26">
+                  <path d="M0,25 C21,25 46,25 74,25 C102,25 118,25 120,25"></path>
+                </svg>
+                <span id="formborder"></span>
+            </label>
+            <button type="submit" id="calculatorButton" name="submit" class="btn btn-light ml-0 ml-sm-3" onclick="reach()">Submit</button>
+            <div class="col-12 text-center mt-3">
+                <span id="treesSaved" class="pl-3 pr-2"></span>
+                <span class="save"><img height="30" width="30" class="pr-2" src="images/tree.png"> Saved</span>
+            </div>
         </form>
     </div>
 

@@ -86,33 +86,33 @@ var pin = "";
 $('.res').on('click' , (e)=> {
     typeOfCustomer = $('.res').val();
     $('.res').toggleClass('btn-success');
-    $('.res').toggleClass('btn-outline-success');
+    $('.res').toggleClass('ebutton');
     $('.com').removeClass('btn-success');
-    $('.com').addClass('btn-outline-success');
+    $('.com').addClass('ebutton');
     $('.ind').removeClass('btn-success');
-    $('.ind').addClass('btn-outline-success');
+    $('.ind').addClass('ebutton');
     $('.nullCustomer').addClass('d-none');
 });
 
 $('.com').on('click' , (e)=> {
     typeOfCustomer = $('.com').val();
     $('.com').toggleClass('btn-success');
-    $('.com').toggleClass('btn-outline-success');
+    $('.com').toggleClass('ebutton');
     $('.res').removeClass('btn-success');
-    $('.res').addClass('btn-outline-success');
+    $('.res').addClass('ebutton');
     $('.ind').removeClass('btn-success');
-    $('.ind').addClass('btn-outline-success');
+    $('.ind').addClass('ebutton');
     $('.nullCustomer').addClass('d-none');
 });
 
 $('.ind').on('click' , (e)=> {
     typeOfCustomer = $('.ind').val();
     $('.ind').toggleClass('btn-success');
-    $('.ind').toggleClass('btn-outline-success');
+    $('.ind').toggleClass('ebutton');
     $('.res').removeClass('btn-success');
-    $('.res').addClass('btn-outline-success');
+    $('.res').addClass('ebutton');
     $('.com').removeClass('btn-success');
-    $('.com').addClass('btn-outline-success');
+    $('.com').addClass('ebutton');
     $('.nullCustomer').addClass('d-none');
 });
 

@@ -227,6 +227,14 @@ p.lead {
     }
 }
 
+#submit:hover,
+#calculatorButton:hover {
+  background: #373b44; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #373b44, #4286f4); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #373b44, #4286f4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: white;
+}
+
 /*WHATSAPP*/
 .whatsapp{
   position: fixed;
@@ -1655,7 +1663,7 @@ a:hover {
 
 
 /*Elastic Input*/
-.phone , .pincode , .electricity {
+.phone , .pincode , .electricity, .phoneNumber {
   position: relative;
   margin: auto;
   width: 100%;
@@ -1849,11 +1857,28 @@ a:hover {
 /*  SOLAR CALCULATOR
 ----------------------*/
 
+#calculatorButton{
+  border-radius: 10px;
+  font-size: 12px;
+  margin: 0px;
+}
 
+.ebutton{
+  font-size: 12px;
+  font-weight: 500;
+  background-color: #fff;
+  color: #5cb85c;
+}
+
+.ebutton:hover{
+  background-color: #5cb85c;
+  color: white;
+}
 
 .pin .label ,
 .eBill .label ,
-.roofspace .label {
+.roofspace .label,
+.phoneNumber .label {
   position: absolute;
   color: #fff;
   top: 16px;
@@ -1863,9 +1888,11 @@ a:hover {
   transform-origin: 0 0;
   transition: all 0.2s ease;
 }
+
 .pin svg,
 .eBill svg,
-.roofspace svg {
+.roofspace svg,
+.phoneNumber svg {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -1875,19 +1902,22 @@ a:hover {
 
 .pin svg path,
 .eBill svg path,
-.roofspace svg path {
+.roofspace svg path,
+.phoneNumber svg path {
   stroke: #c8ccd4;
   stroke-width: 2;
 }
 .pin svg path d,
 .eBill svg path d,
-.roofspace svg path d {
+.roofspace svg path d,
+.phoneNumber svg path d {
   transition: all 0.2s ease;
 }
 
 .pin input,
 .eBill input,
-.roofspace input {
+.roofspace input,
+.phoneNumber input {
   -webkit-appearance: none;
   width: 100%;
   border: 0;
@@ -1903,33 +1933,38 @@ a:hover {
 }
 .pin input:not(:placeholder-shown) + span,
 .eBill input:not(:placeholder-shown) + span,
-.roofspace input:not(:placeholder-shown) + span{
+.roofspace input:not(:placeholder-shown) + span,
+.phoneNumber input:not(:placeholder-shown) + span{
   top: 7px;
   transform: translateY(-26px) scale(0.75);
 }
 
 .pin input:focus ,
 .eBill input:focus ,
-.roofspace input:focus {
+.roofspace input:focus,
+.phoneNumber input:focus {
   background: none;
   outline: none;
 }
 .pin input:focus + span ,
 .eBill input:focus + span ,
-.roofspace input:focus + span{
+.roofspace input:focus + span,
+.phoneNumber input:focus + span{
   color: #07f;
   transform: translateY(-26px) scale(0.75);
   transition-delay: 0.1s;
 }
 .pin input:focus + span + svg path,
 .eBill input:focus + span + svg path,
-.roofspace input:focus + span + svg path {
+.roofspace input:focus + span + svg path,
+.phoneNumber input:focus + span + svg path {
   stroke: #07f;
   animation: elasticInput 0.4s ease forwards;
 }
 .pin input:focus + span + svg + #formborder,
 .eBill input:focus + span + svg + #formborder,
-.roofspace input:focus + span + svg + #formborder {
+.roofspace input:focus + span + svg + #formborder,
+.phoneNumber input:focus + span + svg + #formborder{
   background: #07f;
 }
 
@@ -2088,7 +2123,7 @@ a:hover {
 }
 
 #estimator h3{
-  color: #336600;
+  color: #333366;
 }
 
 #treesSaved{
