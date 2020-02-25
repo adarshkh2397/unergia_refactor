@@ -211,7 +211,7 @@ $('#estimate').on('click', (e)=> {
         localStorage.setItem('LS', lifetimeSavings);
         localStorage.setItem('TS', treesSaved);    
         
-        window.document.location = './calculator.html';
+        window.document.location = 'calculator';
     } 
 });
 
