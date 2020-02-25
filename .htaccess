@@ -15,7 +15,5 @@
 Options +FollowSymLinks
 RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{THE_REQUEST}/index.html HTTP [NC]
-RewriteRule (.*)index.html$ /$1 [R=301,L]
 RewriteCond %{REQUEST_FILENAME}\.html -f
 RewriteRule ^(.*)$ $1.html [NC,L]
