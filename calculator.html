@@ -40,7 +40,7 @@
     <!-- Main css -->
     <link href="css/style.css" rel="stylesheet">
     <!-- Custom JS -->
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     
     <style type="text/css">
         @charset "UTF-8";
@@ -278,9 +278,9 @@
 
     <!--Contact-->
     <div class="container text-center my-5 three animate fadeIn">
-        <h4 style="color: #660033;">To get Customised Solar Design & Multiple Solar Quotes</h4>
+        <h4 style="color: #660033;">To Get Free Customised Solar Design and Competing Solar Quotes Enter Your Number Below</h4>
         <br>
-        <form method="POST" target="destination" id="calcForm"  onsubmit="this.reset();return false;">
+        <form id="calcForm" target="_self" onsubmit="return postToGoogle();" action="" autocomplete="off"> 
             <!--<input type="text"  maxlength="15" required="required" pattern="[0-9]{10}" id="phoneNumber" required class="form1" placeholder="10 Digit Phone Number" />-->
             <label for="phoneNumber" class="phoneNumber">
                 <input type="text" id="phoneNumber" placeholder="&nbsp;"  maxlength="15" required="required" pattern="[0-9]{10}" required>
@@ -290,7 +290,7 @@
                 </svg>
                 <span id="formborder"></span>
             </label>
-            <button type="submit" id="calculatorButton" name="submit" class="btn btn-light ml-0 ml-sm-3" onclick="reach()">Submit</button>
+            <button type="submit" id="calculatorButton" name="submit" class="btn btn-light ml-0 ml-sm-3 mt-3 mt-sm-0">Submit</button>
             <div class="col-12 text-center mt-3">
                 <span id="treesSaved" class="pl-3 pr-2"></span>
                 <span class="save"><img height="30" width="30" class="pr-2" src="images/tree.png"> Saved</span>
@@ -314,19 +314,7 @@
     </footer>
 
 
-    <script>
-        function reach() {
-          var mobileNumber = $("#phoneNumber").val();
-        
-          if(mobileNumber.length == 10)
-            {
-              swal({
-                  text: "We Will Contact You Soon!",
-                  icon: "success",
-                });
-             } 
-        }
-    </script>
+    
 
 
     <!-- Custom JS -->

@@ -1650,7 +1650,7 @@ a:hover {
 .testimonial .card .content .details h2 span {
     font-size:18px;
     font-weight: 400 ;
-    color:#173ad0;
+    color:#fff;
     transition:0.5s;
 }
 
@@ -1865,7 +1865,7 @@ a:hover {
 
 .ebutton{
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 600;
   background-color: #fff;
   color: #5cb85c;
 }

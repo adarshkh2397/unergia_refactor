@@ -192,7 +192,7 @@ $('#estimate').on('click', (e)=> {
         monthlySolarUnits = Math.round(systemSize * 116) ;
 
         //LIFETIME SAVINGS
-        lifetimeSavings = Math.round((monthlySavings*(Math.pow(1.01,25)-1))*100);
+        lifetimeSavings = Math.round(monthlySavings*12*28.17330458);
 
         //console.log("Lifetime" , lifetimeSavings);
 
@@ -200,6 +200,7 @@ $('#estimate').on('click', (e)=> {
         treesSaved = Math.round(systemSize*41.6);
         //console.log("Trees" , treesSaved);
 
+        localStorage.setItem('PIN', pinCode);
         localStorage.setItem('TOC', typeOfCustomer);
         localStorage.setItem('MS', monthlySavings);
         localStorage.setItem('SS', systemSize);
@@ -208,11 +209,12 @@ $('#estimate').on('click', (e)=> {
         localStorage.setItem('USC', upperSystemCost);
         localStorage.setItem('MSU', monthlySolarUnits);
         localStorage.setItem('LS', lifetimeSavings);
-        localStorage.setItem('TS', treesSaved);
-
+        localStorage.setItem('TS', treesSaved);    
+        
         window.document.location = './calculator.html';
     } 
 });
+
 
 
 $("#cal").submit(function(e) {
